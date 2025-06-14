@@ -1,32 +1,22 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-scroll';
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 
-const Navbar = () => {
-  const [isDark, setIsDark] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+type NavbarProps = {
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-  useEffect(() => {
-    const darkMode = localStorage.getItem('darkMode') === 'true';
-    setIsDark(darkMode);
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
+const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
+  const [isScrolled, setIsScrolled] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleDarkMode = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle('dark');
-    localStorage.setItem('darkMode', (!isDark).toString());
-  };
 
   const navItems = [
     { name: 'About', to: 'about' },
@@ -65,11 +55,11 @@ const Navbar = () => {
           </div>
 
           <button
-            onClick={toggleDarkMode}
+            onClick={() => setDarkMode((prev) => !prev)}
             className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-tertiary transition-colors"
             aria-label="Toggle dark mode"
           >
-            {isDark ? (
+            {darkMode ? (
               <SunIcon className="h-6 w-6 text-yellow-500" />
             ) : (
               <MoonIcon className="h-6 w-6 text-gray-700" />

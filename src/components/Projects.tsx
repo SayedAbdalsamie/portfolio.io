@@ -4,32 +4,45 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 const projects = [
   {
+    title: 'Integrated City Management System (ICMS)',
+    description: 'Graduation Project - Built a smart city app with 3 AI services: complaint classification, anomaly detection, and user support chatbot. Used Flask and Azure, deployed for real-time issue management.',
+    demoLink: null,
+    githubLink: null,
+    isGraduation: true,
+  },
+  {
     title: 'Sentiment Analysis',
-    description: 'A real-time sentiment analysis application that can analyze the emotional tone of text input. Built using Python and Streamlit, it provides instant feedback on the sentiment of any given text.',
+    description: 'Developed NLP model using Scikit-learn with 90% F1-score. Built an interactive web application deployed via Streamlit for real-time sentiment analysis.',
     demoLink: 'https://sentimentanalysis-sayed.streamlit.app/',
     githubLink: null,
   },
   {
-    title: 'Facial Expression Recognition',
-    description: 'An advanced computer vision application that can detect and classify human facial expressions in real-time. Using deep learning models to accurately identify emotions from facial features.',
+    title: 'Emotion Recognition',
+    description: 'Designed CNN for facial expressions achieving 85% accuracy. Created an interactive demo application deployed via Streamlit for real-time emotion detection.',
     demoLink: 'https://emotion-recognition1.streamlit.app/',
     githubLink: null,
   },
   {
+    title: 'Voyage Management System',
+    description: 'Built a desktop application using JavaFX for trip scheduling and management. Features include trip planning, scheduling, and management tools.',
+    demoLink: null,
+    githubLink: null,
+  },
+  {
     title: 'Car Crash Classification',
-    description: 'A machine learning project that classifies car crash severity based on various parameters. Implemented using computer vision and deep learning techniques to analyze crash scenarios.',
+    description: 'Machine learning project that classifies car crash severity based on various parameters. Implemented using computer vision and deep learning techniques.',
     demoLink: null,
     githubLink: 'https://github.com/SayedAbdalsamie/DEPI_CarCresh.git',
   },
   {
     title: 'Compliment Classifier',
-    description: 'A web app that classifies compliments using machine learning. Built with Python and deployed at compliment-classifier.vercel.app.',
+    description: 'Web app that classifies compliments using machine learning. Built with Python and deployed for real-time compliment classification.',
     demoLink: 'https://compliment-classifier.vercel.app/',
     githubLink: 'https://github.com/SayedAbdalsamie/Compliment-Classifier',
   },
 ];
 
-const DEFAULT_SHOWN = 3;
+const DEFAULT_SHOWN = 4;
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
@@ -61,9 +74,16 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="project-card"
+              className={`project-card ${project.isGraduation ? 'ring-2 ring-secondary' : ''}`}
             >
               <div className="p-6">
+                {project.isGraduation && (
+                  <div className="mb-3">
+                    <span className="inline-block px-2 py-1 text-xs font-semibold bg-secondary text-white rounded-full">
+                      Graduation Project
+                    </span>
+                  </div>
+                )}
                 <h3 className="text-xl font-bold text-gray-900 dark:text-textPrimary mb-3">
                   {project.title}
                 </h3>

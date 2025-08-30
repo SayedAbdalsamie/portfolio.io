@@ -1,14 +1,26 @@
 import { motion } from 'framer-motion';
-import { EnvelopeIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   const contactLinks = [
     {
+      name: 'Phone',
+      icon: <PhoneIcon className="w-6 h-6" />,
+      link: 'tel:+201095937013',
+      text: '+20 1095937013',
+    },
+    {
       name: 'Email',
       icon: <EnvelopeIcon className="w-6 h-6" />,
       link: 'mailto:abonars30@gmail.com',
       text: 'abonars30@gmail.com',
+    },
+    {
+      name: 'Location',
+      icon: <MapPinIcon className="w-6 h-6" />,
+      link: '#',
+      text: 'Zagazig, Egypt',
     },
     {
       name: 'GitHub',
@@ -42,19 +54,19 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {contactLinks.map((contact, index) => (
             <motion.a
               key={contact.name}
               href={contact.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={contact.link === '#' ? undefined : "_blank"}
+              rel={contact.link === '#' ? undefined : "noopener noreferrer"}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              className="flex flex-col items-center p-6 bg-white dark:bg-primary rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              className={`flex flex-col items-center p-6 bg-white dark:bg-primary rounded-lg shadow-md hover:shadow-lg transition-shadow ${contact.link === '#' ? 'cursor-default' : 'cursor-pointer'}`}
             >
               <div className="text-secondary mb-4">
                 {contact.icon}

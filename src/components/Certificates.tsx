@@ -3,24 +3,34 @@ import { AcademicCapIcon } from '@heroicons/react/24/outline';
 
 const certificates = [
   {
-    title: ' Artificial Intelligence Fundamentals',
+    title: 'Associate Data Scientist',
+    link: '#',
+    issuer: 'DataCamp',
+    date: 'February 16, 2025',
+  },
+  {
+    title: 'Artificial Intelligence Fundamentals',
     link: 'https://www.credly.com/badges/f6047bfd-0450-44a8-89ef-36ac81e0f7b7',
     issuer: 'IBM SkillsBuild',
+    date: 'June 10, 2025',
   },
   {
-    title: 'Deep Learning: CNN Image Classification',
-    link: 'https://www.udemy.com/certificate/UC-d4810ac1-fa91-4bf2-a26a-5a9869248bd7/',
-    issuer: 'Udemy',
+    title: 'Microsoft Machine Learning Engineer',
+    link: '#',
+    issuer: 'DEPI',
+    date: 'April 24 - October 24',
   },
   {
-    title: 'Machine Learning A-Z',
-    link: 'https://www.udemy.com/certificate/UC-7e174a12-ea52-4cfe-986f-f00207d4c138/',
-    issuer: 'Udemy',
+    title: 'Machine Learning & AI Diploma',
+    link: '#',
+    issuer: 'AMIT',
+    date: 'November 24 - September 25',
   },
   {
-    title: 'Other Certificates',
-    link: 'https://drive.google.com/drive/folders/1a2myMJbIRksGZkbbo66QO5rxvlRmjGxa',
-    issuer: 'Other',
+    title: 'Data Scientist | AI and Machine Learning',
+    link: '#',
+    issuer: 'ODC with AMIT',
+    date: '1 Week Program',
   },
 ];
 
@@ -45,11 +55,8 @@ const Certificates = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certificates.map((cert, index) => (
-            <motion.a
+            <motion.div
               key={cert.title}
-              href={cert.link}
-              target="_blank"
-              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -59,16 +66,29 @@ const Certificates = () => {
             >
               <div className="flex items-start space-x-4">
                 <AcademicCapIcon className="w-8 h-8 text-secondary flex-shrink-0" />
-                <div>
+                <div className="flex-1">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-textPrimary mb-2">
                     {cert.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-textSecondary">
+                  <p className="text-sm text-gray-600 dark:text-textSecondary mb-1">
                     {cert.issuer}
                   </p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    {cert.date}
+                  </p>
+                  {cert.link !== '#' && (
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-2 text-xs text-secondary hover:text-secondary/80 transition-colors"
+                    >
+                      View Certificate →
+                    </a>
+                  )}
                 </div>
               </div>
-            </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>

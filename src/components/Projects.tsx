@@ -40,6 +40,12 @@ const projects = [
     demoLink: 'https://compliment-classifier.vercel.app/',
     githubLink: 'https://github.com/SayedAbdalsamie/Compliment-Classifier',
   },
+  {
+    title: 'Boston Housing Price Prediction',
+    description: 'A machine learning application that predicts the median value of homes in Boston neighborhoods based on key features like average rooms per dwelling, percentage of lower status population, and pupil-teacher ratio. Built with Python and machine learning algorithms.',
+    demoLink: null,
+    githubLink: null,
+  },
 ];
 
 const DEFAULT_SHOWN = 4;

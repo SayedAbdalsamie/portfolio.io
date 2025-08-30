@@ -46,6 +46,18 @@ const projects = [
     demoLink: null,
     githubLink: null,
   },
+  {
+    title: 'AI Image Classifier - PyQt5 Application',
+    description: 'A modern PyQt5-based GUI application for AI image classification using pre-trained models. Features include modern interface design, support for Keras (.h5/.keras) and ONNX (.onnx) models, image processing with automatic resizing, optional labels support, and real-time prediction with top-5 predictions and confidence scores.',
+    demoLink: null,
+    githubLink: null,
+  },
+  {
+    title: 'Advanced Edge Detection - Image Processing Tool',
+    description: 'A powerful Qt-based application for edge detection with multiple algorithms and real-time parameter adjustment. Built for advanced image processing tasks with interactive controls and multiple edge detection algorithms.',
+    demoLink: null,
+    githubLink: null,
+  },
 ];
 
 const DEFAULT_SHOWN = 4;

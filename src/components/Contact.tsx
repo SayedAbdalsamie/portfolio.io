@@ -1,6 +1,17 @@
 import { motion } from 'framer-motion';
-import { EnvelopeIcon, PhoneIcon, MapPinIcon, GlobeAltIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
+import {
+  ArrowDownTrayIcon,
+  DocumentTextIcon,
+  EnvelopeIcon,
+  GlobeAltIcon,
+  MapPinIcon,
+  PhoneIcon,
+  RocketLaunchIcon,
+} from '@heroicons/react/24/outline';
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+
+const RESUME_PDF = '/sayed-mohammed-resume.pdf';
+const RESUME_DOWNLOAD_NAME = 'Sayed-Mohammed-Resume.pdf';
 
 const Contact = () => {
   const contactLinks = [
@@ -71,6 +82,41 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
           viewport={{ once: true }}
+          className="glass-panel mx-auto mb-10 flex max-w-xl flex-col items-center gap-4 px-6 py-6 sm:flex-row sm:justify-center sm:gap-6"
+        >
+          <div className="flex items-center gap-2 text-center sm:text-left">
+            <DocumentTextIcon className="h-8 w-8 shrink-0 text-secondary" aria-hidden />
+            <div>
+              <p className="text-sm font-semibold text-gray-900 dark:text-textPrimary">Resume / CV</p>
+              <p className="text-xs text-gray-600 dark:text-textSecondary">PDF · preview &amp; download</p>
+            </div>
+          </div>
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <a
+              href={RESUME_PDF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-github inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold"
+            >
+              <DocumentTextIcon className="h-5 w-5" aria-hidden />
+              Preview CV
+            </a>
+            <a
+              href={RESUME_PDF}
+              download={RESUME_DOWNLOAD_NAME}
+              className="btn-glow inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold shadow-cyan-500/30"
+            >
+              <ArrowDownTrayIcon className="h-5 w-5" aria-hidden />
+              Download CV
+            </a>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45 }}
+          viewport={{ once: true }}
           className="mb-10 flex flex-col items-center gap-5"
         >
           <p className="inline-flex flex-wrap items-center justify-center gap-2 text-center text-sm font-medium text-gray-600 dark:text-textSecondary md:text-base">
@@ -120,8 +166,8 @@ const Contact = () => {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <p className="text-gray-600 dark:text-textSecondary text-sm">
-            Resume available on request; this site mirrors my latest CV highlights.
+          <p className="text-sm text-gray-600 dark:text-textSecondary">
+            CV is available above as PDF · Last updated with my latest experience and projects.
           </p>
         </motion.div>
       </div>

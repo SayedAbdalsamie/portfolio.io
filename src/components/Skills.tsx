@@ -53,7 +53,7 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="section-padding bg-gray-50 dark:bg-tertiary">
+    <section id="skills" className="section-padding border-t border-white/5 dark:border-secondary/10">
       <div className="max-w-7xl mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

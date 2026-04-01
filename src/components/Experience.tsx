@@ -41,7 +41,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="section-padding bg-gray-50 dark:bg-tertiary">
+    <section id="experience" className="section-padding border-t border-white/5 dark:border-secondary/10">
       <div className="max-w-7xl mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-primary rounded-lg p-6 shadow-md"
+              className="glass-card p-6"
             >
               <div className="flex items-start gap-4">
                 <BriefcaseIcon className="w-8 h-8 text-secondary flex-shrink-0 mt-0.5" />

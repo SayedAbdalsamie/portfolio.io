@@ -19,7 +19,7 @@ const Education = () => {
     ];
 
     return (
-        <section id="education" className="section-padding">
+        <section id="education" className="section-padding border-t border-white/5 dark:border-secondary/10">
             <div className="max-w-7xl mx-auto container-padding">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ const Education = () => {
                             Academic Background
                         </h3>
                         {education.map((edu, index) => (
-                            <div key={index} className="bg-white dark:bg-primary rounded-lg p-6 shadow-md">
+                            <div key={index} className="glass-card p-6">
                                 <div className="flex items-start space-x-4">
                                     <AcademicCapIcon className="w-8 h-8 text-secondary flex-shrink-0 mt-1" />
                                     <div className="flex-1">
@@ -63,7 +63,7 @@ const Education = () => {
                                             <span className="text-gray-600 dark:text-textSecondary">
                                                 {edu.period}
                                             </span>
-                                            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                                            <span className="inline-flex items-center rounded-full border border-secondary/35 bg-secondary/10 px-3 py-1 text-sm font-medium text-emerald-800 dark:text-secondary">
                                                 GPA: {edu.gpa}
                                             </span>
                                         </div>
@@ -87,7 +87,7 @@ const Education = () => {
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-textPrimary mb-6">
                             Key Achievements
                         </h3>
-                        <div className="bg-white dark:bg-primary rounded-lg p-6 shadow-md">
+                        <div className="glass-card p-6">
                             <div className="flex items-start space-x-4 mb-4">
                                 <TrophyIcon className="w-8 h-8 text-secondary flex-shrink-0 mt-1" />
                                 <h4 className="text-lg font-semibold text-gray-900 dark:text-textPrimary">
@@ -107,7 +107,7 @@ const Education = () => {
                         </div>
 
                         {/* Additional Info */}
-                        <div className="bg-gray-50 dark:bg-tertiary rounded-lg p-6">
+                        <div className="glass-panel p-6">
                             <h4 className="text-lg font-semibold text-gray-900 dark:text-textPrimary mb-3">
                                 Current Status
                             </h4>

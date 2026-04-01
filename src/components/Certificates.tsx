@@ -33,7 +33,7 @@ const certificates = [
 
 const Certificates = () => {
   return (
-    <section id="certificates" className="section-padding bg-gray-50 dark:bg-tertiary">
+    <section id="certificates" className="section-padding border-t border-white/5 dark:border-secondary/10">
       <div className="max-w-7xl mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ const Certificates = () => {
             href={CERTIFICATES_FOLDER_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary text-primary font-semibold text-sm shadow hover:bg-secondary/90 transition-colors"
+            className="btn-glow inline-flex items-center gap-2 px-5 py-2.5 text-sm shadow-cyan-500/30"
           >
             <FolderOpenIcon className="w-5 h-5" aria-hidden />
             All certificates (Google Drive)
@@ -71,7 +71,7 @@ const Certificates = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              className="block p-6 bg-white dark:bg-primary rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+              className="glass-card block cursor-pointer p-6 hover:shadow-lg"
             >
               <div className="flex items-start space-x-4">
                 <AcademicCapIcon className="w-8 h-8 text-secondary flex-shrink-0" />

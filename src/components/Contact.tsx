@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { EnvelopeIcon, PhoneIcon, MapPinIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, GlobeAltIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const contactLinks = [
@@ -9,6 +9,12 @@ const Contact = () => {
       icon: <PhoneIcon className="w-6 h-6" />,
       link: 'tel:+201095937013',
       text: '+20 1095937013',
+    },
+    {
+      name: 'WhatsApp',
+      icon: <FaWhatsapp className="h-6 w-6" />,
+      link: 'https://wa.me/+201095937013',
+      text: 'Chat on WhatsApp',
     },
     {
       name: 'Email',
@@ -43,16 +49,16 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding border-t border-white/5 dark:border-secondary/10">
       <div className="max-w-7xl mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="mb-12 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-textPrimary mb-4">
+          <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-textPrimary md:text-4xl">
             Get in Touch
           </h2>
           <p className="text-lg text-gray-600 dark:text-textSecondary">
@@ -60,7 +66,27 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45 }}
+          viewport={{ once: true }}
+          className="mb-10 flex flex-col items-center gap-5"
+        >
+          <p className="inline-flex flex-wrap items-center justify-center gap-2 text-center text-sm font-medium text-gray-600 dark:text-textSecondary md:text-base">
+            <RocketLaunchIcon className="h-5 w-5 shrink-0 text-secondary" aria-hidden />
+            <span>Open to Work | Internship | Freelance</span>
+          </p>
+          <a
+            href="mailto:abonars30@gmail.com"
+            className="btn-glow inline-flex items-center gap-2 px-10 py-3 text-base shadow-cyan-500/35"
+          >
+            <EnvelopeIcon className="h-5 w-5" aria-hidden />
+            Contact Me
+          </a>
+        </motion.div>
+
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {contactLinks.map((contact, index) => (
             <motion.a
               key={contact.name}
@@ -72,7 +98,7 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              className={`flex flex-col items-center p-6 bg-white dark:bg-primary rounded-lg shadow-md hover:shadow-lg transition-shadow ${contact.link === '#' ? 'cursor-default' : 'cursor-pointer'}`}
+              className={`glass-card flex flex-col items-center p-6 transition-shadow hover:shadow-lg ${contact.link === '#' ? 'cursor-default' : 'cursor-pointer'}`}
             >
               <div className="text-secondary mb-4">
                 {contact.icon}

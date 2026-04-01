@@ -9,7 +9,7 @@ import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     if (darkMode) {
@@ -20,20 +20,28 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main className="pt-16">
-        <About />
-        <Experience />
-        <Education />
-        <Skills />
-        <Projects />
-        <Certificates />
-        <Contact />
-      </main>
-      <footer className="py-8 text-center text-gray-600 dark:text-textSecondary">
-        <p>© {new Date().getFullYear()} Sayed Mohammed. All rights reserved.</p>
-      </footer>
+    <div className="relative min-h-screen overflow-x-hidden transition-colors duration-300">
+      <div
+        className={`pointer-events-none fixed inset-0 z-0 ${darkMode ? "cosmic-bg" : "light-bg"}`}
+        aria-hidden
+      />
+      <div className="relative z-10">
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <main className="pt-16">
+          <About />
+          <Experience />
+          <Education />
+          <Skills />
+          <Projects />
+          <Certificates />
+          <Contact />
+        </main>
+        <footer className="glass-panel border-t border-secondary/20 py-10 text-center">
+          <p className="text-sm text-gray-600 dark:text-textSecondary">
+            © {new Date().getFullYear()} Sayed Mohammed. All rights reserved.
+          </p>
+        </footer>
+      </div>
     </div>
   );
 }

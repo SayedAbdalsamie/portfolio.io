@@ -29,8 +29,11 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 dark:bg-primary/80 backdrop-blur-sm shadow-md' : 'bg-transparent'
-      }`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'glass-nav shadow-md shadow-black/10' : 'border-b border-transparent bg-white/40 backdrop-blur-sm dark:bg-[#070b14]/40'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -57,7 +60,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
 
           <button
             onClick={() => setDarkMode((prev) => !prev)}
-            className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-tertiary transition-colors"
+            className="p-2 rounded-lg border border-transparent hover:bg-white/15 hover:border-secondary/20 dark:hover:bg-white/10 transition-colors"
             aria-label="Toggle dark mode"
           >
             {darkMode ? (

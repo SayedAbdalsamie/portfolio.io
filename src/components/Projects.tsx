@@ -82,7 +82,7 @@ const Projects = () => {
   const displayedProjects = showAll ? projects : projects.slice(0, DEFAULT_SHOWN);
 
   return (
-    <section id="projects" className="section-padding">
+    <section id="projects" className="section-padding border-t border-white/5 dark:border-secondary/10">
       <div className="max-w-7xl mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -112,7 +112,7 @@ const Projects = () => {
               <div className="p-6">
                 {project.isGraduation && (
                   <div className="mb-3">
-                    <span className="inline-block px-2 py-1 text-xs font-semibold bg-secondary text-white rounded-full">
+                    <span className="inline-block rounded-full border border-secondary/40 bg-secondary/15 px-2 py-1 text-xs font-semibold text-secondary">
                       Graduation Project
                     </span>
                   </div>
@@ -123,27 +123,27 @@ const Projects = () => {
                 <p className="text-gray-600 dark:text-textSecondary mb-4">
                   {project.description}
                 </p>
-                <div className="flex space-x-4">
-                  {project.demoLink && (
-                    <a
-                      href={project.demoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-secondary hover:text-secondary/80 transition-colors"
-                    >
-                      Live Demo
-                      <ArrowTopRightOnSquareIcon className="w-4 h-4 ml-1" />
-                    </a>
-                  )}
+                <div className="flex flex-wrap gap-3">
                   {project.githubLink && (
                     <a
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-secondary hover:text-secondary/80 transition-colors"
+                      className="btn-github inline-flex items-center gap-1.5"
                     >
                       GitHub
-                      <ArrowTopRightOnSquareIcon className="w-4 h-4 ml-1" />
+                      <ArrowTopRightOnSquareIcon className="h-4 w-4" />
+                    </a>
+                  )}
+                  {project.demoLink && (
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-glow inline-flex items-center gap-1.5 py-2 text-sm"
+                    >
+                      Live
+                      <ArrowTopRightOnSquareIcon className="h-4 w-4" />
                     </a>
                   )}
                 </div>
@@ -154,8 +154,9 @@ const Projects = () => {
         {projects.length > DEFAULT_SHOWN && (
           <div className="flex justify-center mt-8">
             <button
+              type="button"
               onClick={() => setShowAll((prev) => !prev)}
-              className="px-6 py-2 rounded-lg bg-secondary text-primary font-semibold shadow hover:bg-secondary/80 transition-colors"
+              className="rounded-xl border border-secondary/40 bg-secondary/15 px-6 py-2.5 font-semibold text-secondary shadow-glow backdrop-blur-sm transition hover:bg-secondary/25"
             >
               {showAll ? 'Show Less' : 'See All'}
             </button>

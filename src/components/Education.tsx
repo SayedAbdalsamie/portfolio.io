@@ -109,15 +109,15 @@ const Education = () => {
                         {/* Additional Info */}
                         <div className="glass-panel p-6">
                             <h4 className="text-lg font-semibold text-gray-900 dark:text-textPrimary mb-3">
-                                Current Status
+                                Graduation
                             </h4>
                             <p className="text-gray-600 dark:text-textSecondary mb-3">
-                                Actively pursuing my degree while working on real-world AI/ML projects and maintaining a strong academic performance.
+                                Graduated with a B.Sc. in Computer &amp; Systems Engineering from Zagazig University (2020–2025). I continue building real-world AI/ML projects alongside my professional work.
                             </p>
                             <div className="flex items-center space-x-2">
-                                <span className="w-3 h-3 bg-green-500 rounded-full"></span>
-                                <span className="text-sm text-gray-600 dark:text-textSecondary">
-                                    Expected Graduation: 2025
+                                <span className="h-3 w-3 shrink-0 rounded-full bg-secondary/80 ring-2 ring-secondary/30" />
+                                <span className="text-sm font-medium text-gray-700 dark:text-secondary">
+                                    Graduated · 2025
                                 </span>
                             </div>
                         </div>

@@ -4,8 +4,23 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 const projects = [
   {
-    title: 'Integrated City Management System (ICMS)',
-    description: 'Graduation Project - Built a smart city app with 3 AI services: complaint classification, anomaly detection, and user support chatbot. Used Flask and Azure, deployed for real-time issue management.',
+    title: 'AI Clinic Chatbot',
+    description:
+      'RAG-based assistant using FAISS and Sentence Transformers with Gemini. Achieved ~87% intent classification accuracy; cut ambiguous replies ~40% and improved resolution time ~30%.',
+    demoLink: null,
+    githubLink: null,
+  },
+  {
+    title: 'ID Card OCR System',
+    description:
+      'OCR pipeline for ID cards with PaddleOCR for Arabic and English. Extracts structured fields (names, addresses, ID numbers) via modular cropping per region and optimized recognition.',
+    demoLink: null,
+    githubLink: null,
+  },
+  {
+    title: 'ICMS – AI Module',
+    description:
+      'Gemini-powered chatbot, transformer-based issue classifier for categorization and prioritization, text moderation with ML ensembles, REST APIs in Flask, deployed with Docker and Azure.',
     demoLink: null,
     githubLink: null,
     isGraduation: true,

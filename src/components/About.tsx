@@ -16,17 +16,27 @@ const About = () => {
               Hi, I'm Sayed Mohammed 👋
             </h2>
             <h3 className="text-xl font-semibold text-secondary">
-              Machine Learning Engineer
+              AI &amp; Machine Learning Engineer
             </h3>
             <p className="text-lg text-gray-600 dark:text-textSecondary">
-              I'm a Machine Learning Engineer skilled in building and deploying ML/DL models with Python, TensorFlow, and PyTorch.
-              My expertise lies in NLP, Computer Vision, and MLOps, where I combine cutting-edge technologies to solve complex problems.
+              Results-driven ML engineer focused on scalable AI: end-to-end workflows, computer vision, NLP, and production deployment with MLOps.
+              I have improved model accuracy into the 90–99% range and cut processing time by up to 30% through strong preprocessing and optimization.
             </p>
             <p className="text-lg text-gray-600 dark:text-textSecondary">
-              I've delivered projects in sentiment analysis, accident classification, and facial emotion recognition with real-world datasets.
-              Currently pursuing my B.Sc. in Computer & Systems Engineering at Zagazig University with a GPA of 3.0 (Good).
+              I completed a 243+ hour Data Science and AI diploma (ML &amp; deep learning, CV &amp; NLP, visualization, MLOps, Docker, deployment) and have worked with real-world datasets at 5K+ samples, pushing accuracy toward 99% on select projects.
             </p>
-            <div className="flex space-x-4">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Languages: Arabic (Native) · English (Advanced)
+            </p>
+            <div className="flex flex-wrap gap-x-4 gap-y-2">
+              <a
+                href="https://portfolio-io-git-main-sayedabdalsamies-projects.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary hover:text-secondary/80 transition-colors"
+              >
+                Portfolio
+              </a>
               <a
                 href="https://github.com/Sayedabdalsamie"
                 target="_blank"

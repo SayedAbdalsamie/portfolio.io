@@ -3,34 +3,28 @@ import { AcademicCapIcon } from '@heroicons/react/24/outline';
 
 const certificates = [
   {
-    title: 'Associate Data Scientist',
+    title: 'AI Internship',
     link: '#',
-    issuer: 'DataCamp',
-    date: 'February 16, 2025',
+    issuer: 'Uneeq Interns',
+    date: 'March 2026',
   },
   {
-    title: 'Artificial Intelligence Fundamentals',
-    link: 'https://www.credly.com/badges/f6047bfd-0450-44a8-89ef-36ac81e0f7b7',
-    issuer: 'IBM SkillsBuild',
-    date: 'June 10, 2025',
+    title: 'AI & Data Scientist Associate',
+    link: '#',
+    issuer: 'AMIT Learning',
+    date: 'October 2025',
+  },
+  {
+    title: 'Data Scientist Associate',
+    link: '#',
+    issuer: 'DataCamp',
+    date: 'February 2025',
   },
   {
     title: 'Microsoft Machine Learning Engineer',
     link: '#',
-    issuer: 'DEPI',
-    date: 'April 24 - October 24',
-  },
-  {
-    title: 'Machine Learning & AI Diploma',
-    link: '#',
-    issuer: 'AMIT',
-    date: 'November 24 - September 25',
-  },
-  {
-    title: 'Data Scientist | AI and Machine Learning',
-    link: '#',
-    issuer: 'ODC with AMIT',
-    date: '1 Week Program',
+    issuer: 'DEPI (Microsoft Track)',
+    date: 'October 2024',
   },
 ];
 

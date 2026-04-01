@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from './components/Navbar';
 import About from './components/About';
+import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -23,6 +24,7 @@ function App() {
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <main className="pt-16">
         <About />
+        <Experience />
         <Education />
         <Skills />
         <Projects />

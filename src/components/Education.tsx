@@ -7,15 +7,15 @@ const Education = () => {
             degree: 'B.Sc. Computer & Systems Engineering',
             university: 'Zagazig University',
             period: '2020 – 2025',
-            gpa: '3.0 (Good)',
-            description: 'Comprehensive study of computer systems, software engineering, and system architecture with focus on practical applications.',
+            gpa: '2.9 (Good)',
+            description: 'Computer and systems engineering with emphasis on software, systems design, and applied AI/ML in projects and coursework.',
         },
     ];
 
     const achievements = [
-        'Graduation Project: Integrated City Management System (ICMS)',
-        'Specialized in Machine Learning and AI applications',
-        'Strong foundation in both theoretical and practical engineering concepts',
+        '243+ hour Data Science & AI Diploma (AMIT Learning): ML, deep learning, CV, NLP, analysis & visualization, MLOps & Docker',
+        'Graduation focus: ICMS AI module — chatbot, classification, moderation, APIs, Docker & Azure',
+        'Experience with large real-world datasets (5K+ samples) and model accuracy targets up to ~99%',
     ];
 
     return (

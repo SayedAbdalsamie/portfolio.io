@@ -20,6 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
 
   const navItems = [
     { name: 'About', to: 'about' },
+    { name: 'Experience', to: 'experience' },
     { name: 'Education', to: 'education' },
     { name: 'Skills', to: 'skills' },
     { name: 'Projects', to: 'projects' },

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
@@ -20,7 +20,13 @@ const Contact = () => {
       name: 'Location',
       icon: <MapPinIcon className="w-6 h-6" />,
       link: '#',
-      text: 'Zagazig, Egypt',
+      text: 'Zagazig, Al-Sharqia, Egypt',
+    },
+    {
+      name: 'Portfolio',
+      icon: <GlobeAltIcon className="w-6 h-6" />,
+      link: 'https://portfolio-io-git-main-sayedabdalsamies-projects.vercel.app/',
+      text: 'Live site (Vercel)',
     },
     {
       name: 'GitHub',
@@ -54,7 +60,7 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {contactLinks.map((contact, index) => (
             <motion.a
               key={contact.name}
@@ -88,8 +94,8 @@ const Contact = () => {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <p className="text-gray-600 dark:text-textSecondary">
-            Note: My resume is private and only accessible upon request.
+          <p className="text-gray-600 dark:text-textSecondary text-sm">
+            Resume available on request; this site mirrors my latest CV highlights.
           </p>
         </motion.div>
       </div>

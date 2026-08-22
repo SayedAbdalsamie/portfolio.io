@@ -37,7 +37,7 @@ const Contact = () => {
       name: 'Location',
       icon: <MapPinIcon className="w-6 h-6" />,
       link: '#',
-      text: 'Zagazig, Al-Sharqia, Egypt',
+      text: 'Gesr Al Suez, Cairo, Egypt',
     },
     {
       name: 'Portfolio',
